@@ -86,15 +86,15 @@ Handloom-Weavers/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/Handloom-Weavers.git
-cd Handloom-Weavers
+git clone https://github.com/your-username/handloom_project.git
+cd handloom-project
 
 # Start local server using XAMPP/WAMP
 Move project folder to htdocs (if using XAMPP)
 Start Apache & MySQL from XAMPP control panel
 
 # Open in browser
-http://localhost/Handloom-Weavers/index.html
+http://localhost/handloom_project/index.html
 ```
 
 ### 📸 Screenshots:
@@ -117,13 +117,9 @@ http://localhost/Handloom-Weavers/index.html
   <a href="https://instagram.com/" target="_blank"><img src="https://img.icons8.com/color/48/instagram-new--v1.png"/></a>
 </p>
 
----
-
 ### ⭐ Show Some Support:
 
 If you like this project, don't forget to **⭐ star the repository** and **follow me** for more updates!
-
----
 
 ### ⚡ Fun Fact:
 

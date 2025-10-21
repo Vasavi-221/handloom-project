@@ -1,8 +1,9 @@
 <!-- Project Banner -->
 
 <p align="center">
-  <img src="img/banner.png" alt="Project Banner"/>
-</p>
+  <img src="assets/img/banner.png" alt="Project Banner"/>
+  </p><img width="701" height="422" alt="banner" src="https://github.com/user-      attachments/assets/cb8ac15c-ecbc-48d6-9312-0e3032c78e0e" />
+
 
 ---
 
@@ -100,11 +101,15 @@ http://localhost/Handloom-Weavers/index.html
 
 | Home Page                                               | Products Page                                              |
 | ------------------------------------------------------- | ---------------------------------------------------------- |
-| <img src="img/homepage.png" width="300"/>               | <img src="img/product.png" width="300"/> |
+| <img src="img/homepage.png" width="300"/>               | <img src="img/product.png" width="300"/> |<img width="1907" height="907" alt="homepage" src="https://github.com/user-attachments/assets/2e043410-b4a9-4eb0-a954-3138aa3913e9" /><img width="1901" height="902" alt="products" src="https://github.com/user-attachments/assets/0503e698-5feb-4660-9cd3-5a99fc13a640" />
+
+
 
 | Login Page                                               | Cart Page                                               |
 | -------------------------------------------------------- | ------------------------------------------------------- |
-| <img src="img/login.png" width="300"/>                   | <img src="img/cart.png" width="300"/> |
+| <img src="img/login.png" width="300"/>                   | <img src="img/cart.png" width="300"/> |<img width="600" height="696" alt="login" src="https://githu<img width="1917" height="541" alt="cart" src="https://github.com/user-attachments/assets/dcc6cf54-cdef-427b-b2d9-6cecf0d3920f" />
+b.com/user-attachments/assets/14ae4fe1-5fa6-4816-810e-eb9f56cf42b6" />
+
 
 ---
 

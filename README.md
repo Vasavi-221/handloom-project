@@ -112,9 +112,9 @@ http://localhost/handloom_project/index.html
 ### 🤝 Connect With Me:
 
 <p align="left">
-  <a href="https://www.linkedin.com/in/" target="_blank"><img src="https://img.icons8.com/color/48/linkedin.png"/></a>
-  <a href="https://github.com/" target="_blank"><img src="https://img.icons8.com/color/48/github.png"/></a>
-  <a href="https://instagram.com/" target="_blank"><img src="https://img.icons8.com/color/48/instagram-new--v1.png"/></a>
+  <a href="https://www.linkedin.com/in/vasavi-veeranki-041687374/" target="_blank"><img src="https://img.icons8.com/color/48/linkedin.png"/></a>
+  <a href="https://github.com/Vasavi-221" target="_blank"><img src="https://img.icons8.com/color/48/github.png"/></a>
+  <a href="https://www.instagram.com/vas_av_i18_76/" target="_blank"><img src="https://img.icons8.com/color/48/instagram-new--v1.png"/></a>
 </p>
 
 ### ⭐ Show Some Support:

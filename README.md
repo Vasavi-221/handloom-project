@@ -101,21 +101,14 @@ http://localhost/Handloom-Weavers/index.html
 ### 📸 Screenshots:
 
 | Home Page                                               | Products Page                                              |
-| ------------------------------------------------------- | ---------------------------------------------------------- |
-| <img src="https://github.com/Vasavi-221/handloom-project
-/blob/main/homepage.png" width="300"/>               | <img src="https://github.com/Vasavi-221/handloom-project/blob/main/products.png" width="300"/> |
+| ------------------------------------------------------- | ------------------------------------
+| <img src="https://github.com/Vasavi-221/handloom-project/blob/main/homepage.png" width="300"/>               | <img src="https://github.com/Vasavi-221/handloom-project/blob/main/products.png" width="300"/> |
 
 
 
 | Login Page                                               | Cart Page                                               |
 | -------------------------------------------------------- | ------------------------------------------------------- |
-| <img src="
-https://github.com/Vasavi-221/handloom-project/blob/main/login.png
-" width="300"/>                   | <img src="https://github.com/Vasavi-221/handloom-project/blob/main/cart.png
-" width="300"/> |
-
-
----
+| <img src="https://github.com/Vasavi-221/handloom-project/blob/main/login.png" width="300"/>                   | <img src="https://github.com/Vasavi-221/handloom-project/blob/main/cart.png" width="300"/> |
 
 ### 🤝 Connect With Me:
 

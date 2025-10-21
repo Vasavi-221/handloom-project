@@ -1,8 +1,7 @@
 <!-- Project Banner -->
 
 <p align="center">
-  <img src="https://github.com/Vasavi-221/handloom-project/blob/main/banner.png
-" alt="Project Banner"/>
+  <img src="https://github.com/Vasavi-221/handloom-project/blob/main/banner.png" alt="Project Banner"/>
   
 
 

@@ -1,0 +1,16 @@
+# OS system files
+.DS_Store
+Thumbs.db
+
+# XAMPP / PHP environment
+vendor/
+.env
+config.php
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# Cache / Logs
+*.log
+*.cache

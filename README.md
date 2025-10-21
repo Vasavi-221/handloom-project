@@ -1,7 +1,8 @@
 <!-- Project Banner -->
 
 <p align="center">
-  <img src="assets/img/banner.png" alt="Project Banner"/>
+  <img src="https://github.com/Vasavi-221/handloom-project/blob/main/banner.png
+" alt="Project Banner"/>
   
 
 
@@ -101,13 +102,17 @@ http://localhost/Handloom-Weavers/index.html
 
 | Home Page                                               | Products Page                                              |
 | ------------------------------------------------------- | ---------------------------------------------------------- |
-| <img src="img/homepage.png" width="300"/>               | <img src="img/product.png" width="300"/> |
+| <img src="https://github.com/Vasavi-221/handloom-project
+/blob/main/homepage.png" width="300"/>               | <img src="https://github.com/Vasavi-221/handloom-project/blob/main/products.png" width="300"/> |
 
 
 
 | Login Page                                               | Cart Page                                               |
 | -------------------------------------------------------- | ------------------------------------------------------- |
-| <img src="img/login.png" width="300"/>                   | <img src="img/cart.png" width="300"/> |
+| <img src="
+https://github.com/Vasavi-221/handloom-project/blob/main/login.png
+" width="300"/>                   | <img src="https://github.com/Vasavi-221/handloom-project/blob/main/cart.png
+" width="300"/> |
 
 
 ---

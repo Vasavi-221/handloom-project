@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | Handloom Weavers</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ===== Search & Filter Section ===== */
+    .filter-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .filter-section input[type="text"],
+    .filter-section select,
+    .filter-section input[type="number"] {
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .filter-section input:focus,
+    .filter-section select:focus {
+      border-color: #008080;
+      box-shadow: 0 0 5px rgba(0, 128, 128, 0.3);
+    }
+
+    .filter-section label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .no-results {
+      text-align: center;
+      color: #555;
+      font-size: 16px;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Handloom Weavers</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="btn">Login</a></li>
+        <li><a href="cart.php">Cart 🛒</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <h2>Authentic Handloom Products</h2>
+    <p class="section-desc">Explore beautiful handwoven items crafted by skilled rural artisans.</p>
+
+    <!-- 🔍 Search + Filter -->
+    <div class="filter-section">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="saree">Sarees</option>
+        <option value="dupatta">Dupattas</option>
+        <option value="shawl">Shawls</option>
+      </select>
+
+      <label for="minPrice">Price ₹</label>
+      <input type="number" id="minPrice" placeholder="Min" min="0" style="width:80px;">
+      <span>–</span>
+      <input type="number" id="maxPrice" placeholder="Max" min="0" style="width:80px;">
+      <button id="filterBtn" style="padding:10px 14px; background:#008080; color:#fff; border:none; border-radius:6px; cursor:pointer;">Apply</button>
+    </div>
+
+    <!-- 🧶 Product Cards -->
+    <div class="product-grid" id="productGrid">
+      <div class="product-card" data-category="saree" data-price="1200">
+        <img src="assets/images/saree1.jpeg" alt="Handloom Saree">
+        <h3>Traditional Cotton Saree</h3>
+        <p>₹1,200</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Traditional Cotton Saree">
+          <input type="hidden" name="product_price" value="1200">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="1200">
+        <img src="assets/images/saree5.webp" alt="Handloom Saree">
+        <h3>Traditional Cotton Saree</h3>
+        <p>₹1,000</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Traditional Cotton Saree">
+          <input type="hidden" name="product_price" value="1000">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="750">
+        <img src="assets/images/saree6.webp" alt="Handloom Saree">
+        <h3>Traditional Cotton Saree</h3>
+        <p>₹690</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Traditional Cotton Saree">
+          <input type="hidden" name="product_price" value="690">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="1200">
+        <img src="assets/images/saree7.webp" alt="Handloom Saree">
+        <h3>Traditional Cotton Saree</h3>
+        <p>₹900</p>
+
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Traditional Cotton Saree">
+          <input type="hidden" name="product_price" value="900">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="1200">
+        <img src="assets/images/saree8.webp" alt="Handloom Saree">
+        <h3>Traditional Cotton Saree</h3>
+        <p>₹1,110</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Traditional Cotton Saree">
+          <input type="hidden" name="product_price" value="1100">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="750">
+        <img src="assets/images/saree9.webp" alt="Handloom Saree">
+        <h3>Traditional Cotton Saree</h3>
+        <p>₹550</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Traditional Cotton Saree">
+          <input type="hidden" name="product_price" value="550">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+
+      <div class="product-card" data-category="saree" data-price="2800">
+        <img src="assets/images/saree2.jpeg" alt="Silk Saree">
+        <h3>Banarasi Silk Saree</h3>
+        <p>₹2,800</p>
+       <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Banarasi Silk Saree">
+          <input type="hidden" name="product_price" value="2800">
+          <button type="submit">Add to Cart</button>
+      </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="1800">
+        <img src="assets/images/saree10.webp" alt="Silk Saree">
+        <h3>Banarasi Silk Saree</h3>
+        <p>₹1,500</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Banarasi Silk Saree">
+          <input type="hidden" name="product_price" value="1500">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="1200">
+        <img src="assets/images/saree11.webp" alt="Silk Saree">
+        <h3>Banarasi Silk Saree</h3>
+        <p>₹1,200</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Banarasi Silk Saree">
+          <input type="hidden" name="product_price" value="1200">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="800">
+        <img src="assets/images/saree12.webp" alt="Silk Saree">
+        <h3>Banarasi Silk Saree</h3>
+        <p>₹800</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Banarasi Silk Saree">
+          <input type="hidden" name="product_price" value="800">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="750">
+        <img src="assets/images/saree13.webp" alt="Silk Saree">
+        <h3>Banarasi Silk Saree</h3>
+        <p>₹700</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Banarasi Silk Saree">
+          <input type="hidden" name="product_price" value="700">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="1200">
+        <img src="assets/images/saree14.webp" alt="Silk Saree">
+        <h3>Banarasi Silk Saree</h3>
+        <p>₹1,200</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Banarasi Silk Saree">
+          <input type="hidden" name="product_price" value="1200">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="saree" data-price="2800">
+        <img src="assets/images/saree15.webp" alt="Silk Saree">
+        <h3>Banarasi Silk Saree</h3>
+        <p>₹2,500</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Banarasi Silk Saree">
+          <input type="hidden" name="product_price" value="2500">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+
+      <div class="product-card" data-category="dupatta" data-price="750">
+        <img src="assets/images/saree3.webp" alt="Dupatta">
+        <h3>Handwoven Dupatta</h3>
+        <p>₹750</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Handwoven Dupatta">
+          <input type="hidden" name="product_price" value="750">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="dupatta" data-price="750">
+        <img src="assets/images/saree16.webp" alt="Dupatta">
+        <h3>Handwoven Dupatta</h3>
+        <p>₹700</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Handwoven Dupatta">
+          <input type="hidden" name="product_price" value="700">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="dupatta" data-price="750">
+        <img src="assets/images/saree17.webp" alt="Dupatta">
+        <h3>Handwoven Dupatta</h3>
+        <p>₹720</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Handwoven Dupatta">
+          <input type="hidden" name="product_price" value="720">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="dupatta" data-price="750">
+        <img src="assets/images/saree18.jpg" alt="Dupatta">
+        <h3>Handwoven Dupatta</h3>
+        <p>₹700</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Handwoven Dupatta">
+          <input type="hidden" name="product_price" value="700">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="dupatta" data-price="750">
+        <img src="assets/images/saree19.jpg" alt="Dupatta">
+        <h3>Handwoven Dupatta</h3>
+        <p>₹690</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Handwoven Dupatta">
+          <input type="hidden" name="product_price" value="690">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="dupatta" data-price="750">
+        <img src="assets/images/saree20.jpg" alt="Dupatta">
+        <h3>Handwoven Dupatta</h3>
+        <p>₹750</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Handwoven Dupatta">
+          <input type="hidden" name="product_price" value="750">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+
+      <div class="product-card" data-category="shawl" data-price="1600">
+        <img src="assets/images/saree4.jpg" alt="Shawl">
+        <h3>Woolen Shawl</h3>
+        <p>₹1,600</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Woolen Shawl">
+          <input type="hidden" name="product_price" value="1600">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="shawl" data-price="1200">
+        <img src="assets/images/saree21.jpg" alt="Shawl">
+        <h3>Woolen Shawl</h3>
+        <p>₹1,200</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Woolen Shawl">
+          <input type="hidden" name="product_price" value="1200">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="shawl" data-price="1600">
+        <img src="assets/images/saree22.jpg" alt="Shawl">
+        <h3>Woolen Shawl</h3>
+        <p>₹1,600</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Woolen Shawl">
+          <input type="hidden" name="product_price" value="1600">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="shawl" data-price="750">
+        <img src="assets/images/saree23.jpg" alt="Shawl">
+        <h3>Woolen Shawl</h3>
+        <p>₹600</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Woolen Shawl">
+          <input type="hidden" name="product_price" value="600">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="shawl" data-price="1200">
+        <img src="assets/images/saree24.webp" alt="Shawl">
+        <h3>Woolen Shawl</h3>
+        <p>₹1,100</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Woolen Shawl">
+          <input type="hidden" name="product_price" value="1100">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="shawl" data-price="1200">
+        <img src="assets/images/saree25.webp" alt="Shawl">
+        <h3>Woolen Shawl</h3>
+        <p>₹1,200</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Woolen Shawl">
+          <input type="hidden" name="product_price" value="1200">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card" data-category="shawl" data-price="750">
+        <img src="assets/images/saree26.webp" alt="Shawl">
+        <h3>Woolen Shawl</h3>
+        <p>₹700</p>
+        <form action="backend/add_to_cart.php" method="POST">
+          <input type="hidden" name="product_name" value="Woolen Shawl">
+          <input type="hidden" name="product_price" value="700">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+
+    <p id="noResults" class="no-results">No products found.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Handloom Weavers. All rights reserved.</p>
+  </footer>
+
+  <!-- 🔍 JS for Search + Filters + Login -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const minPrice = document.getElementById("minPrice");
+    const maxPrice = document.getElementById("maxPrice");
+    const filterBtn = document.getElementById("filterBtn");
+    const products = document.querySelectorAll(".product-card");
+    const noResults = document.getElementById("noResults");
+
+    function filterProducts() {
+      const searchText = searchInput.value.toLowerCase();
+      const selectedCategory = categoryFilter.value;
+      const min = parseInt(minPrice.value) || 0;
+      const max = parseInt(maxPrice.value) || Infinity;
+      let visibleCount = 0;
+
+      products.forEach(product => {
+        const title = product.querySelector("h3").textContent.toLowerCase();
+        const category = product.getAttribute("data-category");
+        const price = parseInt(product.getAttribute("data-price"));
+
+        const matchesSearch = title.includes(searchText);
+        const matchesCategory = selectedCategory === "all" || category === selectedCategory;
+        const matchesPrice = price >= min && price <= max;
+
+        if (matchesSearch && matchesCategory && matchesPrice) {
+          product.style.display = "block";
+          visibleCount++;
+        } else {
+          product.style.display = "none";
+        }
+      });
+
+      noResults.style.display = visibleCount === 0 ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", filterProducts);
+    categoryFilter.addEventListener("change", filterProducts);
+    filterBtn.addEventListener("click", filterProducts);
+
+    // 🔐 Login/Logout Logic
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const loginBtn = document.querySelector('a[href="login.html"]');
+
+    if (loginBtn) {
+      if (isLoggedIn === "true") {
+        loginBtn.textContent = "Logout";
+        loginBtn.href = "#";
+        loginBtn.addEventListener("click", () => {
+          if (confirm("Are you sure you want to logout?")) {
+            localStorage.removeItem("isLoggedIn");
+            alert("You have been logged out!");
+            window.location.href = "login.html";
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>

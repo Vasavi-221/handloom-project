@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Handloom Weavers</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Success popup */
+    .success-popup {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2ecc71;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.4s ease;
+      z-index: 1000;
+    }
+
+    .success-popup.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Error message */
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body class="login-page">
+
+  <div class="form-container">
+    <h2>Login</h2>
+    <form id="loginForm" action="backend/login.php" method="POST">
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <div id="error" class="error-message"></div>
+      <button type="submit">Login</button>
+    </form>
+    <a href="#" class="forgot-link">Forgot Password?</a>
+    <p>Don’t have an account? <a href="register.html">Register</a></p>
+  </div>
+
+  <!-- Success Popup -->
+  <div id="successPopup" class="success-popup">✅ Login Successful! Redirecting...</div>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const errorDiv = document.getElementById("error");
+    const successPopup = document.getElementById("successPopup");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      errorDiv.textContent = ""; 
+      let valid = true;
+
+      // Simple validation
+      if (email.value.trim() === "" || password.value.trim() === "") {
+        errorDiv.textContent = "Please fill in all fields.";
+        valid = false;
+      }
+
+      // Email format
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.value.match(emailPattern)) {
+        errorDiv.textContent = "Enter a valid email address.";
+        valid = false;
+      }
+
+      // Password length
+      if (password.value.length < 6) {
+        errorDiv.textContent = "Password must be at least 6 characters.";
+        valid = false;
+      }
+
+      if (valid) {
+        showSuccessPopup();
+        form.reset();
+      }
+    });
+
+    function showSuccessPopup() {
+      successPopup.classList.add("show");
+      // Redirect to home page after 2 seconds
+     setTimeout(() => {
+      successPopup.classList.remove("show");
+      localStorage.setItem("isLoggedIn", "true"); // ✅ Save login state
+      window.location.href = "index.html";
+    }, 2000);
+  }
+  </script>
+</body>
+</html>

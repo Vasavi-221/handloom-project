@@ -1,0 +1,367 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== HEADER & NAVBAR ========== */
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #008080;
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fff;
+  background-color: #008080;
+}
+
+/* ========== HERO SECTION (HOME PAGE) ========== */
+.hero {
+  height: 85vh;
+  background: url("../images/banner.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.hero-btn {
+  background: #008080;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #006666;
+}
+
+/* ========== PRODUCTS SECTION ========== */
+.products-section {
+  padding: 60px;
+  text-align: center;
+}
+
+.products-section h2 {
+  color: #008080;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 12px;
+  color: #333;
+  font-size: 18px;
+}
+
+.product-card p {
+  color: #666;
+  font-size: 15px;
+  margin: 5px 0 10px 0;
+}
+
+.product-card button {
+  background-color: #008080;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #006666;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-section {
+  padding: 60px 100px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 30px;
+  color: #008080;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-section {
+  padding: 60px 100px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #008080;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.contact-form button {
+  background: #008080;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #006666;
+}
+
+/* ========== LOGIN & REGISTER PAGE ========== */
+body.login-page {
+  background: linear-gradient(135deg, #008080, #20b2aa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 350px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.form-container h2 {
+  color: #008080;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-container input:focus {
+  border-color: #008080;
+  box-shadow: 0 0 6px rgba(0, 128, 128, 0.3);
+  outline: none;
+}
+
+.form-container button {
+  width: 100%;
+  background: linear-gradient(135deg, #008080, #20b2aa);
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-container button:hover {
+  background: linear-gradient(135deg, #006666, #008080);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 128, 128, 0.4);
+}
+
+.form-container p {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+.form-container a {
+  color: #008080;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-container a:hover {
+  color: #006666;
+  text-decoration: underline;
+}
+
+.forgot-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #008080;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.forgot-link:hover {
+  color: #006666;
+  text-decoration: underline;
+}
+
+/* ========== MESSAGE BUTTON LINK ========== */
+.btn-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #008080;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #006666;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

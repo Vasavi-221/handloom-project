@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Handloom Weavers</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Handloom Weavers</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="assets/images/weavers.png" alt="Rural Weavers">
+      </div>
+      <div class="about-text">
+        <h2>Our Mission</h2>
+        <p>
+          <strong>Handloom Weavers</strong> is a digital bridge between traditional artisans and the modern world.
+          Our goal is to empower rural weavers by connecting them directly with customers — removing middlemen and ensuring fair pay.
+        </p>
+        <p>
+          Every product listed here tells a story of craftsmanship, patience, and culture. By purchasing from our platform,
+          you are preserving the heritage of handloom art while supporting sustainable livelihoods.
+        </p>
+        <p>
+          We aim to make local art global — allowing customers to explore the beauty of handmade fabrics from every corner of India.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Handloom Weavers. All rights reserved.</p>
+  </footer>
+  <script>
+  // Check if user is logged in
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  const loginBtn = document.querySelector('a[href="login.html"]');
+
+  if (loginBtn) {
+    if (isLoggedIn === "true") {
+      // If logged in → show Logout button instead of Login
+      loginBtn.textContent = "Logout";
+      loginBtn.href = "#"; // disable old link
+
+      loginBtn.addEventListener("click", () => {
+        // Confirm logout
+        if (confirm("Are you sure you want to logout?")) {
+          localStorage.removeItem("isLoggedIn"); // clear login state
+          alert("You have been logged out!");
+          window.location.href = "login.html"; // ✅ Redirect to login page
+        }
+      });
+    }
+  }
+</script>
+
+</body>
+</html>

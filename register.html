@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Handloom Weavers</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Error message */
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      text-align: left;
+    }
+
+    /* Success popup */
+    .success-popup {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2ecc71;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.4s ease;
+      z-index: 1000;
+    }
+
+    .success-popup.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="login-page">
+
+  <div class="form-container">
+    <h2>Create Account</h2>
+    <form id="registerForm" action="backend/register.php" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" id="email" name="email" placeholder="Email Address" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+      <div id="error" class="error-message"></div>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <!-- Success Popup -->
+  <div id="successPopup" class="success-popup">✅ Registration Successful! Redirecting...</div>
+
+  <script>
+    const form = document.getElementById("registerForm");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm_password");
+    const email = document.getElementById("email");
+    const errorDiv = document.getElementById("error");
+    const successPopup = document.getElementById("successPopup");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      errorDiv.textContent = ""; 
+      let valid = true;
+
+      // Email format check
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.value.match(emailPattern)) {
+        errorDiv.textContent = "Please enter a valid email address.";
+        email.style.borderColor = "red";
+        valid = false;
+      } else {
+        email.style.borderColor = "#ccc";
+      }
+
+      // Password length
+      if (password.value.length < 6) {
+        errorDiv.textContent = "Password must be at least 6 characters long.";
+        password.style.borderColor = "red";
+        valid = false;
+      } else {
+        password.style.borderColor = "#ccc";
+      }
+
+      // Confirm password check
+      if (password.value !== confirmPassword.value) {
+        errorDiv.textContent = "Passwords do not match!";
+        confirmPassword.style.borderColor = "red";
+        valid = false;
+      } else {
+        confirmPassword.style.borderColor = "#ccc";
+      }
+
+      if (valid) {
+        showSuccessPopup();
+        form.reset();
+      }
+    });
+
+    function showSuccessPopup() {
+      successPopup.classList.add("show");
+      // Wait 2 seconds, then redirect
+      setTimeout(() => {
+        successPopup.classList.remove("show");
+        window.location.href = "login.html";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

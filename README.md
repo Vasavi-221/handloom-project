@@ -18,13 +18,6 @@ A simple and elegant platform to promote and sell traditional handloom products 
 **VASAVI VEERANKI**
 📚 CSE Student | 💻 Web Developer 
 
----
-
-### 🌐 Live Demo:
-
-🚀 *Add your hosted link here (GitHub Pages / Netlify / localhost)*
-
----
 
 ### 🛠️ Tech Stack & Tools:
 
